@@ -62,7 +62,7 @@ jobs:
       with:
         allowUpdates: true
         artifactErrorsFailBuild: true
-        artifacts: build/**/**/*.tar.gz
+        artifacts: build/*.tar.gz
         omitBody: true
         omitBodyDuringUpdate: true
         omitName: true
