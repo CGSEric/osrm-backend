@@ -2,14 +2,14 @@ name: osrm-backend CI
 on:
   push:
     branches:
-      - master
+      - OSRM-5.27.1
     tags:
       - v[1-9]+.[0-9]+.[0-9]+
       - v[1-9]+.[0-9]+.[0-9]+-[a-zA-Z]+.[0-9]+
       - v[1-9]+.[0-9]+-[0-9a-zA-Z]+
   pull_request:
     branches:
-      - master
+      - OSRM-5.27.1
 
 env:
   CCACHE_TEMPDIR: /tmp/.ccache-temp
@@ -62,7 +62,7 @@ jobs:
       with:
         allowUpdates: true
         artifactErrorsFailBuild: true
-        artifacts: build/stage/**/*.tar.gz
+        artifacts: build/**/**/*.tar.gz
         omitBody: true
         omitBodyDuringUpdate: true
         omitName: true
