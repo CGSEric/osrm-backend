@@ -34,7 +34,7 @@ jobs:
     - run: cmake --version
     - uses: actions/setup-node@v3
       with:
-        node-version: 16
+        node-version: 17
     - run: node --version
     - run: npm --version
     - name: Prepare environment
