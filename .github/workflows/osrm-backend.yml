@@ -91,6 +91,7 @@ jobs:
         clang-format-10 --version
     - name: Run checks
       run: |
+        npm audit fix
         ./scripts/check_taginfo.py taginfo.json profiles/car.lua
         ./scripts/format.sh && ./scripts/error_on_dirty.sh
         node ./scripts/validate_changelog.js
