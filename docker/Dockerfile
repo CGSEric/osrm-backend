@@ -9,7 +9,7 @@ RUN apt-get update && \
 
 RUN NPROC=${BUILD_CONCURRENCY:-$(nproc)} && \
     ldconfig /usr/local/lib && \
-    git clone --branch v2021.12.0 --single-branch https://github.com/oneapi-src/oneTBB.git && \
+    git clone --branch v2021.3.0 --single-branch https://github.com/oneapi-src/oneTBB.git && \
     cd oneTBB && \
     mkdir build && \
     cd build && \
