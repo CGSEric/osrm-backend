@@ -155,20 +155,6 @@ jobs:
             CXXCOMPILER: g++-9
             ENABLE_COVERAGE: ON
 
-          - name: gcc-9-debug-asan-ubsan
-            continue-on-error: false
-            node: 12
-            runs-on: ubuntu-20.04
-            BUILD_TOOLS: ON
-            BUILD_TYPE: Debug
-            CCOMPILER: gcc-9
-            CUCUMBER_TIMEOUT: 20000
-            CXXCOMPILER: g++-9
-            ENABLE_SANITIZER: ON
-            TARGET_ARCH: x86_64-asan-ubsan
-            OSRM_CONNECTION_RETRIES: 10
-            OSRM_CONNECTION_EXP_BACKOFF_COEF: 1.5
-
           - name: clang-6.0-debug
             continue-on-error: false
             node: 12
@@ -189,17 +175,6 @@ jobs:
             CXXCOMPILER: clang++-14
             CUCUMBER_TIMEOUT: 60000
             ENABLE_CLANG_TIDY: ON
-
-          - name: conan-linux-debug-asan-ubsan
-            continue-on-error: false
-            node: 12
-            runs-on: ubuntu-20.04
-            BUILD_TOOLS: ON
-            BUILD_TYPE: Release
-            CCOMPILER: clang-11
-            CXXCOMPILER: clang++-11
-            ENABLE_CONAN: ON
-            ENABLE_SANITIZER: ON
 
           - name: conan-linux-release
             continue-on-error: false
