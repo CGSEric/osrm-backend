@@ -29,7 +29,7 @@ jobs:
       ENABLE_APPLE_SILICON: "OFF"
     steps:
     - uses: actions/checkout@v3
-    - run: pip install conan==1.53.0
+    - run: pip install conan==2.2.3
     - run: conan --version
     - run: cmake --version
     - uses: actions/setup-node@v3
@@ -549,7 +549,7 @@ jobs:
 
     - name: Install dev dependencies
       run: |
-        python3 -m pip install conan==1.53.0
+        python3 -m pip install conan==2.2.3
 
         # ccache
         if [[ "${RUNNER_OS}" == "Linux" ]]; then
